@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hu.sztomek.archdemo.presentation.views.LoadingRetryView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lrv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:state="idle"
+    tools:context=".presentation.screens.check_user.CheckUserActivity">
+
+</hu.sztomek.archdemo.presentation.views.LoadingRetryView>
