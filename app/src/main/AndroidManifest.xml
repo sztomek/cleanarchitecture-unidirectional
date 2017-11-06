@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hu.sztomek.archdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name="hu.sztomek.archdemo.presentation.app.DemoApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name="hu.sztomek.archdemo.presentation.screens.login.LoginActivity" />
+        <activity android:name="hu.sztomek.archdemo.presentation.screens.email_login.EmailLoginActivity"
+            android:parentActivityName="hu.sztomek.archdemo.presentation.screens.login.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hu.sztomek.archdemo.presentation.screens.login.LoginActivity" />
+        </activity>
+        <activity android:name="hu.sztomek.archdemo.presentation.screens.forgot_pw.ForgotPwActivity"
+            android:parentActivityName="hu.sztomek.archdemo.presentation.screens.email_login.EmailLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hu.sztomek.archdemo.presentation.screens.email_login.EmailLoginActivity" />
+        </activity>
+        <activity android:name="hu.sztomek.archdemo.presentation.screens.email_register.EmailRegisterActivity"
+            android:parentActivityName="hu.sztomek.archdemo.presentation.screens.email_login.EmailLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hu.sztomek.archdemo.presentation.screens.email_login.EmailLoginActivity" />
+        </activity>
+        <activity
+            android:name="hu.sztomek.archdemo.presentation.screens.splash.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hu.sztomek.archdemo.presentation.screens.check_user.CheckUserActivity"
+            android:label="@string/title_activity_check_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="hu.sztomek.archdemo.presentation.screens.landing.LandingActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="hu.sztomek.archdemo.presentation.screens.landing.timezone.edit.TimezoneEditActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName="hu.sztomek.archdemo.presentation.screens.landing.LandingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hu.sztomek.archdemo.presentation.screens.landing.LandingActivity" />
+        </activity>
+    </application>
+
+</manifest>
